@@ -13,10 +13,10 @@
       contentType: false,
       processData: false,
       success: data => {
-        console.log(data)
+        SwimTeam.move(data);
       }
     });
-  }, 1000)
+  }, 10)
 
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
