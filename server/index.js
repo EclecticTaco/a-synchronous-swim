@@ -1,8 +1,8 @@
 
 
 
-const keypressHandler = require('./js/keypressHandler');
-keypressHandler.initialize(message => console.log(`Message received: ${message}`));
+// const keypressHandler = require('./js/keypressHandler');
+// keypressHandler.initialize(message => console.log(`Message received: ${message}`));
 
 const httpHandler = require('./js/httpHandler');
 
@@ -16,3 +16,5 @@ server.listen(port, ip);
 
 console.log('Server is running in the terminal!');
 console.log(`Listening on http://${ip}:${port}`);
+
+// keypressHandler.initialize

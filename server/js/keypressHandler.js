@@ -1,5 +1,6 @@
 const _ = require('underscore');
 const keypress = require('keypress');
+const fs = require('fs');
 
 ///////////////////////////////////////////////////////////////////////////////
 // Utility Function ///////////////////////////////////////////////////////////
@@ -37,10 +38,11 @@ module.exports.initialize = (callback) => {
 
     // check to see if the keypress itself is a valid message
     if (isValidMessage(key.name)) {
+      console.log('called')
       callback(key.name);
       return; // don't do any more processing on this key
     }
-    
+
     // otherwise build up a message from individual characters
     if (key && (key.name === 'return' || key.name === 'enter')) {
       // on enter, process the message
@@ -67,3 +69,11 @@ if (process.stdin.setRawMode) {
   // configure stdin for raw mode, if possible
   process.stdin.setRawMode(true);
 }
+
+// fs.readFile('command.txt', function(error, fileContents) {
+//   if (error) {
+//     console.log(error.toString());
+//   } else {
+//     console.log(fileContents.toString());
+//   }
+// })
